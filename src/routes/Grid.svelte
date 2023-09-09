@@ -1,10 +1,12 @@
-<script>
+<script lang="ts">
   import Sqaure from "./Sqaure.svelte";
+
+  export let grid: string[];
 
 </script>
 <div class="grid">
-    {#each Array(16) as _}
-        <Sqaure/>
+    {#each grid as emoji}
+        <Sqaure {emoji}/>
     {/each}
 </div>
 
